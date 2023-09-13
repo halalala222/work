@@ -3,6 +3,7 @@ package config
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/valyala/fasthttp"
 	"io"
 	"os"
 	"time"
@@ -21,7 +22,7 @@ func newLogFile() *os.File {
 	return f
 }
 
-func FiberInit() {
+func FiberInit() *fasthttp.Server {
 	app := fiber.New()
 	app.Use(logger.New(logger.Config{
 		Next:         nil,
@@ -33,8 +34,8 @@ func FiberInit() {
 	}))
 
 	v1 := app.Group("/vi")
-	api := v1.Group("/api")
-	router = api
+	router = v1.Group("/api")
+	return app.Server()
 }
 
 func R() fiber.Router {

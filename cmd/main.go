@@ -1,14 +1,12 @@
 package main
 
 import (
-	"context"
 	"github.com/spf13/viper"
+	"github.com/valyala/fasthttp"
 	"go.uber.org/zap"
-	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
-	"time"
 	"work/internal/config"
 	"work/internal/pkg/log"
 )
@@ -16,13 +14,10 @@ import (
 func main() {
 	Init()
 
-	srv := &http.Server{
-		Addr:    viper.GetString("server.addr"),
-		Handler: config.IrisInit(),
-	}
+	srv := config.FiberInit()
 
 	go func() {
-		if err := srv.ListenAndServe(); err != nil {
+		if err := srv.ListenAndServe(viper.GetString("server.addr")); err != nil {
 			zap.L().Error("Server ListenAndServe", zap.Error(err))
 			panic(err)
 		}
@@ -39,10 +34,9 @@ func Init() {
 	log.Init()
 
 	config.MemorySQLiteInit()
-	config.IrisInit()
 }
 
-func closeServer(srv *http.Server) {
+func closeServer(srv *fasthttp.Server) {
 	defer func(l *zap.Logger) {
 		err := l.Sync()
 		if err != nil {
@@ -54,10 +48,7 @@ func closeServer(srv *http.Server) {
 	signal.Notify(quit, os.Interrupt, os.Kill, syscall.SIGTERM)
 	<-quit
 
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-
-	if err := srv.Shutdown(ctx); err != nil {
+	if err := srv.Shutdown(); err != nil {
 		zap.L().Error("Server Shutdown", zap.Error(err))
 	}
 	zap.L().Info("Server exited")
