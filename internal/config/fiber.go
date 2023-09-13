@@ -3,15 +3,11 @@ package config
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
-	"github.com/valyala/fasthttp"
 	"io"
 	"os"
 	"time"
 	"work/internal/consts"
-)
-
-var (
-	router fiber.Router
+	"work/internal/pkg/middleware"
 )
 
 func newLogFile() *os.File {
@@ -22,22 +18,18 @@ func newLogFile() *os.File {
 	return f
 }
 
-func FiberInit() *fasthttp.Server {
-	app := fiber.New()
+func FiberInit() *fiber.App {
+	app := fiber.New(fiber.Config{
+		ErrorHandler: middleware.CustomErrorHandler,
+	})
 	app.Use(logger.New(logger.Config{
 		Next:         nil,
-		Format:       "[Fiber] ${ip}:${port} ${time} ${status} - ${latency} ${method} ${path}\\n",
+		Format:       "[Fiber] ${ip}:${port} ${time} ${status} - ${latency} ${method} ${path}\n",
 		TimeFormat:   "15:04:05",
 		TimeZone:     "Local",
 		TimeInterval: 500 * time.Millisecond,
 		Output:       io.MultiWriter(newLogFile(), os.Stdout),
 	}))
 
-	v1 := app.Group("/vi")
-	router = v1.Group("/api")
-	return app.Server()
-}
-
-func R() fiber.Router {
-	return router
+	return app
 }

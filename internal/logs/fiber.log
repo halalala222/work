@@ -1,0 +1,17 @@
+[Fiber] 127.0.0.1:5475 22:44:35 200 -      1.1673ms POST /api/drug\n[Fiber] 127.0.0.1:5475 22:44:55 200 -       679.7µs GET /api/drug\n[Fiber] 127.0.0.1:5475 22:45:05 200 -         614µs POST /api/drug\n[Fiber] 127.0.0.1:5475 22:45:06 200 -       819.7µs POST /api/drug\n[Fiber] 127.0.0.1:5475 22:45:07 200 -       818.8µs POST /api/drug\n[Fiber] 127.0.0.1:5475 22:45:10 200 -       745.5µs GET /api/drug\n[Fiber] 127.0.0.1:5475 22:45:29 200 -      1.1338ms PUT /api/drug\n[Fiber] 127.0.0.1:5475 22:45:34 200 -         899µs GET /api/drug\n[Fiber] 127.0.0.1:5475 22:45:47 500 -       524.5µs DELETE /api/drug/:1\n[Fiber] 127.0.0.1:5475 22:46:09 500 -       261.8µs DELETE /api/drug/:1\n[Fiber] 127.0.0.1:5532 22:47:24 500 -     10.34821s DELETE /api/drug/:1
+[Fiber] 127.0.0.1:5537 22:47:43 200 -       659.7µs DELETE /api/drug/1
+[Fiber] 127.0.0.1:5537 22:47:49 405 -            0s GET /api/drug/1
+[Fiber] 127.0.0.1:5537 22:48:01 200 -       304.3µs GET /api/drug
+[Fiber] 127.0.0.1:5537 22:48:11 200 -       613.3µs POST /api/drug
+[Fiber] 127.0.0.1:5537 22:48:13 200 -       401.7µs POST /api/drug
+[Fiber] 127.0.0.1:5537 22:48:13 200 -       586.9µs POST /api/drug
+[Fiber] 127.0.0.1:5537 22:48:17 200 -       480.9µs GET /api/drug
+[Fiber] 127.0.0.1:5537 22:48:27 200 -       129.3µs DELETE /api/drug/2
+[Fiber] 127.0.0.1:5537 22:48:31 405 -            0s GET /api/drug/2
+[Fiber] 127.0.0.1:5537 22:48:35 200 -       568.7µs GET /api/drug
+[Fiber] 127.0.0.1:5603 22:51:11 500 -       613.2µs GET /api/drug
+[Fiber] 127.0.0.1:8244 22:52:00 200 -       589.9µs GET /api/drug
+[Fiber] 127.0.0.1:8342 22:53:12 200 -       601.9µs GET /api/drug
+[Fiber] 127.0.0.1:8468 22:54:14 200 -       527.8µs GET /api/drug
+[Fiber] 127.0.0.1:8535 22:59:04 200 -      1.1421ms GET /api/drug
+[Fiber] 127.0.0.1:8535 22:59:14 200 -      1.0628ms GET /api/drug

@@ -2,6 +2,7 @@ package config
 
 import (
 	"context"
+	"database/sql"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"gorm.io/driver/sqlite"
@@ -21,7 +22,10 @@ var (
 )
 
 func MemorySQLiteInit() {
-	var err error
+	var (
+		err   error
+		sqlDB *sql.DB
+	)
 	if db, err = gorm.Open(sqlite.Open("file::memory:?cache=shared"), &gorm.Config{
 		Logger:      getGormLogger(),
 		PrepareStmt: true,
@@ -36,6 +40,17 @@ func MemorySQLiteInit() {
 		&domain.Doctor{},
 		&domain.Sales{},
 	); err != nil {
+		panic(err)
+	}
+
+	if sqlDB, err = db.DB(); err != nil {
+		panic(err)
+	}
+	file, err := os.ReadFile("internal/config/sqlite.sql")
+	if err != nil {
+		panic(err)
+	}
+	if _, err = sqlDB.Exec(string(file)); err != nil {
 		panic(err)
 	}
 }
@@ -70,9 +85,9 @@ func getGormLogger() logger.Interface {
 func CloseDB() {
 	sqlDB, err := db.DB()
 	if err != nil {
-		zap.L().Error("get sqlDB error", zap.Any("error", err))
+		zap.L().Error("get sqlDB error", zap.Error(err))
 	}
 	if err = sqlDB.Close(); err != nil {
-		zap.L().Error("close sqlDB error", zap.Any("error", err))
+		zap.L().Error("close sqlDB error", zap.Error(err))
 	}
 }

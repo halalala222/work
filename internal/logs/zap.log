@@ -1,0 +1,30 @@
+{"level":"DEBUG","ts":"2023-09-13T17:00:28.732+0800","caller":"cmd/main.go:32","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T17:41:21.330+0800","caller":"cmd/main.go:64","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T17:41:27.690+0800","caller":"cmd/main.go:32","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T17:42:53.765+0800","caller":"cmd/main.go:64","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T17:48:29.754+0800","caller":"cmd/main.go:32","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T17:49:02.030+0800","caller":"cmd/main.go:64","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T17:49:06.286+0800","caller":"cmd/main.go:32","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T17:49:55.932+0800","caller":"cmd/main.go:64","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T22:23:02.683+0800","caller":"cmd/main.go:32","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T22:24:40.061+0800","caller":"cmd/main.go:64","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T22:27:17.393+0800","caller":"cmd/main.go:32","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T22:28:14.010+0800","caller":"cmd/main.go:64","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T22:34:07.691+0800","caller":"cmd/main.go:32","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T22:41:27.301+0800","caller":"cmd/main.go:64","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T22:41:31.216+0800","caller":"cmd/main.go:28","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T22:42:42.039+0800","caller":"cmd/main.go:68","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T22:42:45.942+0800","caller":"cmd/main.go:27","msg":"server run on debug mode"}
+{"level":"INFO","ts":"2023-09-13T22:43:05.255+0800","caller":"cmd/main.go:67","msg":"Server exited"}
+{"level":"DEBUG","ts":"2023-09-13T22:44:24.953+0800","caller":"cmd/main.go:26","msg":"server run on debug mode"}
+{"level":"ERROR","ts":"2023-09-13T22:45:47.808+0800","caller":"delivery/drug_http.go:64","msg":"ParseInt error","error":"strconv.ParseInt: parsing \":1\": invalid syntax"}
+{"level":"ERROR","ts":"2023-09-13T22:46:09.310+0800","caller":"delivery/drug_http.go:64","msg":"ParseInt error","error":"strconv.ParseInt: parsing \":1\": invalid syntax"}
+{"level":"DEBUG","ts":"2023-09-13T22:47:22.079+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"ERROR","ts":"2023-09-13T22:47:35.296+0800","caller":"delivery/drug_http.go:64","msg":"ParseInt error","error":"strconv.ParseInt: parsing \":1\": invalid syntax"}
+{"level":"DEBUG","ts":"2023-09-13T22:47:39.326+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"DEBUG","ts":"2023-09-13T22:51:03.737+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"ERROR","ts":"2023-09-13T22:51:11.712+0800","caller":"usecase/drug_usecase.go:27","msg":"fetch all drug error","error":"near \"INSERT\": syntax error"}
+{"level":"DEBUG","ts":"2023-09-13T22:51:54.406+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"DEBUG","ts":"2023-09-13T22:53:10.249+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"DEBUG","ts":"2023-09-13T22:54:04.231+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"DEBUG","ts":"2023-09-13T22:58:45.093+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
