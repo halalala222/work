@@ -288,3 +288,29 @@ INSERT INTO `drug` (`name`, `measurement`, `type`) VALUES ("test", 1.1, "test");
 [0.596ms] [rows:6] SELECT * FROM `drug`
 [DB] 2023/09/13 22:59:15 E:/work/internal/drug/repository/repository_mysql.go:21
 [1.063ms] [rows:6] SELECT * FROM `drug`
+[DB] 2023/09/14 15:08:07 E:/work/internal/config/db.go:38
+[0.583ms] [rows:-] SELECT count(*) FROM sqlite_master WHERE type='table' AND name="drug"
+[DB] 2023/09/14 15:08:07 E:/work/internal/config/db.go:38
+[0.521ms] [rows:0] CREATE TABLE `drug` (`id` integer,`name` text,`measurement` real,`type` text,PRIMARY KEY (`id`))
+[DB] 2023/09/14 15:08:07 E:/work/internal/config/db.go:38
+[0.000ms] [rows:-] SELECT count(*) FROM sqlite_master WHERE type='table' AND name="doctor"
+[DB] 2023/09/14 15:08:07 E:/work/internal/config/db.go:38
+[0.009ms] [rows:0] CREATE TABLE `doctor` (`id` integer,`name` text,`department` text,`position` text,PRIMARY KEY (`id`))
+[DB] 2023/09/14 15:08:07 E:/work/internal/config/db.go:38
+[0.000ms] [rows:-] SELECT count(*) FROM sqlite_master WHERE type='table' AND name="sales"
+[DB] 2023/09/14 15:08:07 E:/work/internal/config/db.go:38
+[0.000ms] [rows:0] CREATE TABLE `sales` (`id` integer,`name` text,`purchase_price` real,`selling_price` real,PRIMARY KEY (`id`))
+[DB] 2023/09/14 15:14:36 E:/work/internal/config/db.go:38
+[0.000ms] [rows:-] SELECT count(*) FROM sqlite_master WHERE type='table' AND name="drug"
+[DB] 2023/09/14 15:14:36 E:/work/internal/config/db.go:38
+[0.000ms] [rows:0] CREATE TABLE `drug` (`id` integer,`name` text,`measurement` real,`type` text,PRIMARY KEY (`id`))
+[DB] 2023/09/14 15:14:36 E:/work/internal/config/db.go:38
+[0.000ms] [rows:-] SELECT count(*) FROM sqlite_master WHERE type='table' AND name="doctor"
+[DB] 2023/09/14 15:14:36 E:/work/internal/config/db.go:38
+[0.000ms] [rows:0] CREATE TABLE `doctor` (`id` integer,`name` text,`department` text,`position` text,PRIMARY KEY (`id`))
+[DB] 2023/09/14 15:14:36 E:/work/internal/config/db.go:38
+[0.000ms] [rows:-] SELECT count(*) FROM sqlite_master WHERE type='table' AND name="sales"
+[DB] 2023/09/14 15:14:36 E:/work/internal/config/db.go:38
+[0.000ms] [rows:0] CREATE TABLE `sales` (`id` integer,`name` text,`purchase_price` real,`selling_price` real,PRIMARY KEY (`id`))
+[DB] 2023/09/14 15:16:05 E:/work/internal/drug/repository/repository_mysql.go:21
+[1.111ms] [rows:5] SELECT * FROM `drug`

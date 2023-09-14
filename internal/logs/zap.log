@@ -28,3 +28,5 @@
 {"level":"DEBUG","ts":"2023-09-13T22:53:10.249+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
 {"level":"DEBUG","ts":"2023-09-13T22:54:04.231+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
 {"level":"DEBUG","ts":"2023-09-13T22:58:45.093+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"DEBUG","ts":"2023-09-14T15:08:07.050+0800","caller":"cmd/main.go:22","msg":"server run on debug mode"}
+{"level":"DEBUG","ts":"2023-09-14T15:14:36.168+0800","caller":"cmd/main.go:28","msg":"server run on debug mode"}

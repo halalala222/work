@@ -74,8 +74,10 @@ func (d *DrugDelivery) Delete(c *fiber.Ctx) error {
 
 func DrugRouter(router fiber.Router, handler *DrugDelivery) {
 	drug := router.Group("/drug")
-	drug.Get("", handler.GetAll)
-	drug.Post("", handler.Create)
-	drug.Put("", handler.Update)
-	drug.Delete("/:id", handler.Delete)
+	{
+		drug.Get("", handler.GetAll)
+		drug.Post("", handler.Create)
+		drug.Put("", handler.Update)
+		drug.Delete("/:id", handler.Delete)
+	}
 }
