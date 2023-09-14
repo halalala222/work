@@ -1,6 +1,6 @@
 {
   "DEBUG": true,
   "server": {
-    "addr": "localhost:8080"
+    "addr": "localhost:8081"
   }
 }
